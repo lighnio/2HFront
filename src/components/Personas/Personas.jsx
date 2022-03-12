@@ -1,6 +1,6 @@
 import { useState } from "react"
 import instance from '../../extras/axiosconf';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 // **************
 //   Components
@@ -66,9 +66,10 @@ export default function Personas() {
                         ) : <tr><td colSpan={5}>No records yet.</td></tr>}
                     </tbody>
                 </table>
-                ) : <button onClick={() => { getPersonas() }}>Cargar Datos</button>}
+                ) : <a className="btn" onClick={() => { getPersonas() }}>Cargar Datos</a>}
             </div>
-            <button onClick={() => { getPersonas() }}>Ingresar Datos</button>
+            {/* <button onClick={() => { getPersonas() }}>Ingresar Datos</button> */}
+            <NavLink to="/personas/insertar" className='btn info'>Insertar Registro</NavLink>
         </div>
     )
 }

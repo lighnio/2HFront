@@ -7,9 +7,7 @@ import Navigation from './components/Navigation';
 export default function App() {
   return (
     
-    <div>
-      sss
-    </div>
+    <h1>Proxus</h1>
 
   )
 }

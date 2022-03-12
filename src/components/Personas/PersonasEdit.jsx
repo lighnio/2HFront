@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useEffect } from 'react/cjs/react.production.min';
 import instance from "../../extras/axiosconf"
 
 export default function EditarPersona() {
@@ -47,9 +46,9 @@ export default function EditarPersona() {
                         <label htmlFor="Nombre">Genero: </label>
                         <input type="text" name="Nombre" id="" defaultValue={data.Genero} onChange={(e) => {setGen(e.target.value.trim())}}/>
                         
-                        <input type="button" onClick={() => {setPersona(name, date, gen)}} value="Actualizar" />
+                        <input type="button" className='btn info' onClick={() => {setPersona(name, date, gen)}} value="Actualizar" />
                     </form>
-                ) : <button onClick={() => {getPersona()}}>Obtener Datos</button>}
+                ) : <a className="btn" onClick={() => {getPersona()}}>Obtener Datos</a>}
 
             </div>
                 

@@ -8,10 +8,17 @@ import {
 // **************
 //   Components
 // **************
+
+// General
+import Navigation from './components/Navigation';
+
+// Personas
 import Personas from './components/Personas/Personas';
 import PersonasEdit from './components/Personas/PersonasEdit';
+import PersonasInsert from './components/Personas/PersonasInsert';
+
+// Empleados
 import Empleados from './components/Empleados';
-import Navigation from './components/Navigation';
 
 import './index.css'
 import App from './App'
@@ -31,10 +38,17 @@ render(
         </main>
       }
     />
+      
+      {/* Index Route */}
       <Route path='/' element={<App />} />
-      <Route path='empleados' element={<Empleados />} />
+
+      {/* Personas Routes */}
       <Route path='personas' element={<Personas />} />
       <Route path='personas/editar/:id' element={<PersonasEdit/>} />
+      <Route path='personas/insertar/' element={<PersonasInsert/>}></Route>
+
+      {/* Empleados Routes */}
+      <Route path='empleados' element={<Empleados />} />
     </Routes>
   </BrowserRouter>
   </div>,

@@ -1,5 +1,5 @@
 export default function PersonasInsert() {
     return ( 
-        <div></div>
+        <div>Insert</div>
      );
 }
