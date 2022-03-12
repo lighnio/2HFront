@@ -5,6 +5,7 @@ export default function Navigation() {
         <nav className="navigation">
         <NavLink to="/personas">Personas</NavLink>
         <NavLink to="/empleados">Empleados</NavLink>
+        <NavLink to="/registros">Registros</NavLink>
         </nav>
     );
 }

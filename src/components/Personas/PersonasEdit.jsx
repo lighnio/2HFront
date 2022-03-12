@@ -16,6 +16,10 @@ export default function EditarPersona() {
         });
     }
 
+    const goPersonasHome = () => {
+        window.location.replace('http://localhost:3000/personas')
+    }
+
     const setPersona = async(name, date, gen) => {
         let put = {
             IdPersona: window.location.href.match(/\d+$/)[0],
@@ -26,7 +30,7 @@ export default function EditarPersona() {
         await instance.put(`/personas/${put.IdPersona}`, put).then((res) => {
             console.log(res.status());
         }).catch(err => console.log(err))
-        window.location.replace('http://localhost:3000/personas')
+        goPersonasHome();
     }
 
     return (
@@ -47,6 +51,7 @@ export default function EditarPersona() {
                         <input type="text" name="Nombre" id="" defaultValue={data.Genero} onChange={(e) => {setGen(e.target.value.trim())}}/>
                         
                         <input type="button" className='btn info' onClick={() => {setPersona(name, date, gen)}} value="Actualizar" />
+                        <a className="btn danger" onClick={() => {goPersonasHome()}}>Cancelar</a>
                     </form>
                 ) : <a className="btn" onClick={() => {getPersona()}}>Obtener Datos</a>}
 

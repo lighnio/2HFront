@@ -18,10 +18,13 @@ import PersonasEdit from './components/Personas/PersonasEdit';
 import PersonasInsert from './components/Personas/PersonasInsert';
 
 // Empleados
-import Empleados from './components/Empleados';
+import Empleados from './components/Empleados/Empleados';
 
 import './index.css'
 import App from './App'
+import EmpleadosEdit from './components/Empleados/EmpleadosEdit';
+import EmpleadosInsert from './components/Empleados/EmpleadosInsert';
+import Registros from './components/Registro/Registros';
 
 const rootElement = document.getElementById('root');
 render(
@@ -49,6 +52,12 @@ render(
 
       {/* Empleados Routes */}
       <Route path='empleados' element={<Empleados />} />
+      <Route path='empleados/editar/:id' element={<EmpleadosEdit />} />
+      <Route path='empleados/insertar/' element={<EmpleadosInsert />} />
+
+      {/* Registro Routes */}
+      <Route path='registros/' element={<Registros />} />
+
     </Routes>
   </BrowserRouter>
   </div>,

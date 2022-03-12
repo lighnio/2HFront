@@ -25,7 +25,6 @@ button {
   user-select: none;
   text-decoration: none;
   width: 25%;
-
 }
 
 .contenedor{
@@ -37,20 +36,24 @@ button {
   width: 90%;
 }
 
-.delete{
+.danger{
   background-color: red;
   color: white  ;
-}
-
-.edit{
-  background-color: blue;
-  color: white;
 }
 
 .info{
   background-color: blue;
   color: white;
 }
+
+label{
+  font-size: 1.2em;
+}
+
+.success{
+  background-color: rgb(20, 219, 20);
+}
+
 
 /* ************** */
 /*    Navigation  */
@@ -73,11 +76,11 @@ table{
   width: 100%;
 }
 
-thead{
-  position: sticky;
+/* thead{
   top: 0;
+  position: sticky;
   background: #ABDD93;
-}
+} */
 
 table, th, td {
   border: 1px solid;
@@ -102,10 +105,9 @@ td a {
 .tableContenedor{
   align-items: center;
   display: flex;
-  height: 400px;
-  overflow: auto;
+  /* height: 400px; */
+  /* overflow-y: scroll; */
   border: 1px solid black;
-  
 }
 
 /* EditPersona */

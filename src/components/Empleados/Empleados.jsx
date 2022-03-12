@@ -5,38 +5,37 @@ import { NavLink } from 'react-router-dom';
 // **************
 //   Components
 // **************
-import PersonaEdit from './PersonasEdit'
 
-export default function Personas() {
+
+export default function Empleados() {
+
     const [data, setData] = useState(null);
 
-    const getPersonas = async () => {
-        await instance(`/personas`).then((res) => {
+    const getEmpleados = async () => {
+        await instance(`/empleados`).then((res) => {
             setData(res.data);
-            console.log(res.data);
         });
     }
 
-    const deletePersona = async (id) => {
-        await instance.delete(`/personas/${id}`).then((res) => {
-            getPersonas();
+    const deleteEmpleado = async (id) => {
+        await instance.delete(`/empleados/${id}`).then((res) => {
+            getEmpleados();
             console.log(res);
         })
     }
 
     return (
-
         <div className="contenedor">
-            <h1>Personas</h1>
+            <h1>Empleados</h1>
             <div className="tableContenedor">
                 {data? (
                     <table>
                     <thead>
                         <tr>
+                            <th>IdEmpleado</th>
                             <th>IdPersona</th>
-                            <th>Nombre</th>
-                            <th>Fecha de Nacimiento</th>
-                            <th>Genero</th>
+                            <th>IdDepartamento</th>
+                            <th>IdPuesto</th>
                             <th>Funcionalidad</th>
                         </tr>
                     </thead>
@@ -46,13 +45,13 @@ export default function Personas() {
                             data.map((value, index) => {
                                 return (
                                     <tr key={value.IdPersona}>
+                                        <td>{value.IdEmpleado}</td>
                                         <td>{value.IdPersona}</td>
-                                        <td>{value.Nombre}</td>
-                                        <td>{value.FechaDeNacimiento}</td>
-                                        <td>{value.Genero}</td>
+                                        <td>{value.IdDepartamento}</td>
+                                        <td>{value.IdPuesto}</td>
                                         <td>
-                                            <a onClick={() => { deletePersona(value.IdPersona) }} className="danger">Eliminar</a>
-                                            <a href={`personas/editar/${value.IdPersona}`} className="info">Editar</a>
+                                            <a onClick={() => { deleteEmpleado(value.IdEmpleado) }} className="danger">Eliminar</a>
+                                            <a href={`/empleados/editar/${value.IdEmpleado}`} className="info">Editar</a>
                                         </td>
                                     </tr>
                                 )
@@ -61,10 +60,11 @@ export default function Personas() {
                         ) : <tr><td colSpan={5}>No records yet.</td></tr>}
                     </tbody>
                 </table>
-                ) : <a className="btn" onClick={() => { getPersonas() }}>Cargar Datos</a>}
+                ) : <a className="btn" onClick={() => { getEmpleados() }}>Cargar Datos</a>}
             </div>
             {/* <button onClick={() => { getPersonas() }}>Ingresar Datos</button> */}
-            <NavLink to="/personas/insertar" className='btn info'>Insertar Registro</NavLink>
+            <NavLink to="/empleados/insertar" className='btn info'>Insertar Registro</NavLink>
         </div>
-    )
+    );
 }
+
