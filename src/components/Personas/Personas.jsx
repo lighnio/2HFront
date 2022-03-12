@@ -34,7 +34,8 @@ export default function Personas() {
         <div className="contenedor">
             <h1>Personas</h1>
             <div className="tableContenedor">
-                <table>
+                {data? (
+                    <table>
                     <thead>
                         <tr>
                             <th>IdPersona</th>
@@ -65,9 +66,9 @@ export default function Personas() {
                         ) : <tr><td colSpan={5}>No records yet.</td></tr>}
                     </tbody>
                 </table>
+                ) : <button onClick={() => { getPersonas() }}>Cargar Datos</button>}
             </div>
-
-            <button onClick={() => { getPersonas() }}>Cargar Datos</button>
+            <button onClick={() => { getPersonas() }}>Ingresar Datos</button>
         </div>
     )
 }

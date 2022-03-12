@@ -27,6 +27,7 @@ export default function EditarPersona() {
         await instance.put(`/personas/${put.IdPersona}`, put).then((res) => {
             console.log(res.status());
         }).catch(err => console.log(err))
+        window.location.replace('http://localhost:3000/personas')
     }
 
     return (

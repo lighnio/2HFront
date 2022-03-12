@@ -82,9 +82,12 @@ td a {
 }
 
 .tableContenedor{
+  align-items: center;
+  display: flex;
   height: 400px;
   overflow: auto;
   border: 1px solid black;
+  
 }
 
 /* EditPersona */
