@@ -19,7 +19,7 @@ export default function Personas() {
     const deletePersona = async (id) => {
         await instance.delete(`/personas/${id}`).then((res) => {
             getPersonas();
-            console.log(res.status());
+            console.log(res);
         })
     }
 
