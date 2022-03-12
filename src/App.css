@@ -24,6 +24,16 @@ button {
   width: 90%;
 }
 
+.delete{
+  background-color: red;
+  color: white  ;
+}
+
+.edit{
+  background-color: blue;
+  color: white;
+}
+
 /* ************** */
 /*    Navigation  */
 /* ************** */
@@ -71,13 +81,35 @@ td a {
   user-select: none;
 }
 
-.delete{
-  background-color: red;
-  color: white  ;
-}
-
 .tableContenedor{
   height: 400px;
   overflow: auto;
   border: 1px solid black;
+}
+
+/* EditPersona */
+
+.formContenedor{
+  height: 400px;
+  border: 1px solid black;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.editForm{
+  width: 50%;
+  text-align: center;
+}
+
+.editForm input, label{
+  display: block;
+  margin: 20px 0px;
+}
+
+.editForm input{
+  font-size: 1.2em;
+  text-align: center;
+  width: 100%;
 }

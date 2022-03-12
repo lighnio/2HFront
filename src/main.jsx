@@ -8,7 +8,8 @@ import {
 // **************
 //   Components
 // **************
-import Personas from './components/Personas';
+import Personas from './components/Personas/Personas';
+import PersonasEdit from './components/Personas/PersonasEdit';
 import Empleados from './components/Empleados';
 import Navigation from './components/Navigation';
 
@@ -33,6 +34,7 @@ render(
       <Route path='/' element={<App />} />
       <Route path='empleados' element={<Empleados />} />
       <Route path='personas' element={<Personas />} />
+      <Route path='personas/editar/:id' element={<PersonasEdit/>} />
     </Routes>
   </BrowserRouter>
   </div>,
