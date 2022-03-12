@@ -19,12 +19,22 @@ import PersonasInsert from './components/Personas/PersonasInsert';
 
 // Empleados
 import Empleados from './components/Empleados/Empleados';
+import EmpleadosEdit from './components/Empleados/EmpleadosEdit';
+import EmpleadosInsert from './components/Empleados/EmpleadosInsert';
+
+// Registros
+import Registros from './components/Registro/Registros';
+import RegistrosInsert from './components/Registro/RegistrosInsert';
+
+// Planilla
+import Planilla from './components/Planilla/Planilla';
+
+// Bitacora
+import Bitacora from './components/Bitacora/Bitacora'
+
 
 import './index.css'
 import App from './App'
-import EmpleadosEdit from './components/Empleados/EmpleadosEdit';
-import EmpleadosInsert from './components/Empleados/EmpleadosInsert';
-import Registros from './components/Registro/Registros';
 
 const rootElement = document.getElementById('root');
 render(
@@ -57,6 +67,15 @@ render(
 
       {/* Registro Routes */}
       <Route path='registros/' element={<Registros />} />
+      <Route path='registros/insertar' element={<RegistrosInsert/>} />
+
+      {/* Planilla Routes */}
+      <Route path='planilla/' element={<Planilla />} />
+
+      {/* Bitacora Routes */}
+      <Route path='bitacora/' element={<Bitacora />} />
+
+
 
     </Routes>
   </BrowserRouter>

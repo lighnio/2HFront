@@ -50,10 +50,13 @@ label{
   font-size: 1.2em;
 }
 
+.mb-2{
+  margin-bottom: 100px;
+}
+
 .success{
   background-color: rgb(20, 219, 20);
 }
-
 
 /* ************** */
 /*    Navigation  */

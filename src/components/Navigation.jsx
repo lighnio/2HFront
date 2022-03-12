@@ -6,6 +6,8 @@ export default function Navigation() {
         <NavLink to="/personas">Personas</NavLink>
         <NavLink to="/empleados">Empleados</NavLink>
         <NavLink to="/registros">Registros</NavLink>
+        <NavLink to="/planilla">Planilla</NavLink>
+        <NavLink to="/bitacora">Bitacora</NavLink>
         </nav>
     );
 }
