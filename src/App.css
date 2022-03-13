@@ -58,6 +58,10 @@ label{
   background-color: rgb(20, 219, 20);
 }
 
+.team{
+  font-size: 3.5em;
+}
+
 /* ************** */
 /*    Navigation  */
 /* ************** */
@@ -69,7 +73,32 @@ label{
 
 nav a {
   margin-right: 16px;
+  text-decoration: none;
+  transition: all ease 1s;
 }
+
+nav a:hover{
+  color: black;
+  font-size: 1.3em;
+}
+
+
+/* ************** */
+/* Home Styles */
+/* ************** */
+
+.contenedor h1{
+  font-size: 4em;
+  transition: all ease 1s;
+}
+
+.contenedor h1:hover{
+  color: brown;
+  cursor: pointer;
+  transform: rotateX(360deg);
+}
+
+
 
 /* ************** */
 /*Persona Styles  */

@@ -5,9 +5,18 @@ import './App.css'
 import Navigation from './components/Navigation';
 
 export default function App() {
+  
+  const scroll = () => {
+    
+  }
+
+  scroll();
+
   return (
     
-    <h1>Proxus</h1>
+    <div className="contenedor">
+      <h1 className='team'>#ProxusTeam</h1>
+    </div>
 
   )
 }
